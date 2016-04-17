@@ -71,12 +71,23 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RequestingClientFaultConsumer.cs" />
+    <Compile Include="RequestingClientService.cs" />
+    <Compile Include="SimpleRequest.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="..\CommonLog4Net.config">
+      <Link>CommonLog4Net.config</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ConsoleEngine\ConsoleEngine.csproj">
+      <Project>{561372fb-256d-4ded-9cf2-21f6bfa5188c}</Project>
+      <Name>ConsoleEngine</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Sample.MessageTypes\Sample.MessageTypes.csproj">
       <Project>{B857261C-0EC8-4D51-9577-E72908E7F9A6}</Project>
       <Name>Sample.MessageTypes</Name>
